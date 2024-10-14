@@ -1,0 +1,187 @@
+/* Import a monospaced font for better code readability */
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap');
+
+body {
+    font-family: 'Source Code Pro', monospace;
+    background-color: #282a36; /* Dracula Background */
+    color: #f8f8f2;            /* Dracula Foreground */
+    margin: 20px;
+}
+
+h1 {
+    color: #f8f8f2; /* Foreground color */
+    border-bottom: 1px solid #44475a;
+    padding-bottom: 10px;
+}
+
+.command {
+    border: 1px solid #44475a; /* Dracula Current Line */
+    padding: 15px;
+    margin-bottom: 15px;
+    background-color: #343746; /* Slightly lighter than background */
+    border-radius: 5px;
+}
+
+.subcommands {
+    margin-left: 20px;
+    border-left: 2px solid #6272a4;
+    padding-left: 15px;
+    margin-top: 15px;
+}
+
+label {
+    display: block;
+    margin-top: 15px;
+    color: #8be9fd; /* Dracula Cyan */
+}
+
+input[type="text"],
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    box-sizing: border-box;
+    background-color: #44475a; /* Dracula Current Line */
+    color: #f8f8f2;            /* Foreground color */
+    border: 1px solid #6272a4; /* Dracula Comment */
+    border-radius: 3px;
+}
+
+input[type="text"]:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: #50fa7b; /* Dracula Green */
+    box-shadow: 0 0 5px rgba(80, 250, 123, 0.5);
+}
+
+textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+button {
+    margin-top: 15px;
+    background-color: #6272a4; /* Dracula Comment */
+    color: #f8f8f2;            /* Foreground color */
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 3px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #50fa7b; /* Dracula Green */
+    color: #282a36;            /* Background color */
+}
+
+#generatedCode {
+    width: 100%;
+    height: 300px;
+    margin-top: 20px;
+    padding: 15px;
+    box-sizing: border-box;
+    font-family: 'Source Code Pro', monospace;
+    background-color: #282a36; /* Dracula Background */
+    color: #f8f8f2;            /* Foreground color */
+    border: 1px solid #44475a; /* Dracula Current Line */
+    border-radius: 5px;
+    overflow: auto;
+}
+
+#copyButton {
+    margin-top: 10px;
+    background-color: #bd93f9; /* Dracula Purple */
+}
+
+#copyButton:hover {
+    background-color: #ff79c6; /* Dracula Pink */
+}
+
+#addCommandButton {
+    background-color: #ffb86c; /* Dracula Orange */
+}
+
+#addCommandButton:hover {
+    background-color: #ff79c6; /* Dracula Pink */
+}
+
+#generateButton {
+    background-color: #50fa7b; /* Dracula Green */
+    margin-left: 10px;
+}
+
+#generateButton:hover {
+    background-color: #f1fa8c; /* Dracula Yellow */
+    color: #282a36;            /* Background color */
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: #6272a4; /* Dracula Comment */
+}
+
+button:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(248, 248, 242, 0.5);
+}
+
+.command > button {
+    margin-right: 10px;
+}
+
+.removeCommandButton {
+    background-color: #ff5555; /* Dracula Red */
+}
+
+.removeCommandButton:hover {
+    background-color: #ff79c6; /* Dracula Pink */
+}
+
+.addSubCommandButton {
+    background-color: #8be9fd; /* Dracula Cyan */
+}
+
+.addSubCommandButton:hover {
+    background-color: #50fa7b; /* Dracula Green */
+}
+
+::selection {
+    background-color: #44475a; /* Dracula Selection */
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #282a36; /* Dracula Background */
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #6272a4; /* Dracula Comment */
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #50fa7b; /* Dracula Green */
+}
+
+@media (max-width: 600px) {
+    body {
+        margin: 10px;
+    }
+
+    button {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .command > button {
+        width: auto;
+        margin-right: 0;
+    }
+}

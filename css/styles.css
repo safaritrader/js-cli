@@ -1,0 +1,171 @@
+/* Import the 'Source Code Pro' font */
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap');
+
+/* Global Styles */
+body {
+    font-family: 'Source Code Pro', monospace;
+    background-color: #282a36; /* Dracula Background */
+    color: #f8f8f2;            /* Dracula Foreground */
+    margin: 0;
+    padding: 20px;
+    line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #f8f8f2; /* Foreground color */
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+}
+
+p {
+    color: #f8f8f2;
+    margin-bottom: 1em;
+}
+
+a {
+    color: #8be9fd; /* Dracula Cyan */
+    text-decoration: none;
+}
+
+a:hover {
+    color: #50fa7b; /* Dracula Green */
+}
+
+ul, ol {
+    margin-left: 20px;
+    margin-bottom: 1em;
+}
+
+li {
+    margin-bottom: 0.5em;
+}
+
+footer {
+    margin-top: 2em;
+    padding-top: 1em;
+    border-top: 1px solid #44475a; /* Dracula Current Line */
+    color: #6272a4; /* Dracula Comment */
+    text-align: center;
+}
+
+code {
+    background-color: #44475a; /* Dracula Current Line */
+    padding: 2px 4px;
+    border-radius: 4px;
+    color: #f8f8f2;
+}
+
+pre {
+    background-color: #44475a;
+    padding: 10px;
+    border-radius: 5px;
+    overflow: auto;
+    color: #f8f8f2;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid #44475a;
+    margin: 2em 0;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 1em;
+}
+
+th, td {
+    padding: 10px;
+    border: 1px solid #44475a;
+}
+
+th {
+    background-color: #6272a4; /* Dracula Comment */
+    color: #f8f8f2;
+}
+
+td {
+    background-color: #343746; /* Slightly lighter than background */
+    color: #f8f8f2;
+}
+
+blockquote {
+    border-left: 4px solid #6272a4;
+    padding-left: 10px;
+    color: #f8f8f2;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+button, input[type="submit"], input[type="reset"] {
+    background-color: #6272a4; /* Dracula Comment */
+    color: #f8f8f2;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 3px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+button:hover, input[type="submit"]:hover, input[type="reset"]:hover {
+    background-color: #50fa7b; /* Dracula Green */
+    color: #282a36; /* Background color */
+}
+
+input, textarea, select {
+    background-color: #44475a; /* Dracula Current Line */
+    color: #f8f8f2;
+    border: 1px solid #6272a4;
+    padding: 10px;
+    border-radius: 3px;
+    font-size: 16px;
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 1em;
+}
+
+input:focus, textarea:focus, select:focus {
+    outline: none;
+    border-color: #50fa7b; /* Dracula Green */
+    box-shadow: 0 0 5px rgba(80, 250, 123, 0.5);
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5em;
+    color: #8be9fd; /* Dracula Cyan */
+}
+
+::selection {
+    background-color: #44475a; /* Dracula Selection */
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #282a36; /* Dracula Background */
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #6272a4; /* Dracula Comment */
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #50fa7b; /* Dracula Green */
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+}

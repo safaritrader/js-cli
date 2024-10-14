@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JS CLI</title>
+  <link rel="stylesheet" href="./css/header.css">
+  <style>
+    body {
+      font-family: 'Source Code Pro', monospace;
+      background-color: #282a36;
+      color: #f8f8f2;
+      margin: 20px;
+    }
+    #output {
+      background-color: #282a36;
+      border: 1px solid #44475a;
+      padding: 10px;
+      height: 300px;
+      overflow-y: auto;
+      margin-bottom: 10px;
+      white-space: pre-wrap;
+    }
+    #input {
+      width: calc(100% - 22px);
+      padding: 10px;
+      font-size: 16px;
+      background-color: #44475a;
+      color: #f8f8f2;
+      border: 1px solid #6272a4;
+    }
+    #input:focus {
+      outline: none;
+      border-color: #50fa7b;
+    }
+
+  </style>
+</head>
+<body>
+<!-- Navigation Menu -->
+<nav>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="cli.html"  style="color: #50fa7b;">CLI Interface</a></li>
+    <li><a href="command_creator.html">Command Creator</a></li>
+  </ul>
+</nav>
+<h1>CLI Test</h1>
+<div id="output"></div>
+<input type="text" id="input" placeholder="Enter command..." autocomplete="off" />
+<footer>
+  <p>&copy; 2024-10-14 Made for &#127987; With Chatgpt o1-preview <a href="https://github.com/safaritrader" style="color: #f8f8f2 !important;">Hassan Safari</a></p>
+</footer>
+<script type="text/javascript" src="./js/cli.js"></script>
+<script>
+  // Handlers
+  function typeHandler(lastAnswer) {
+    return { response: 'Type framework activated.' };
+  }
+
+  function nameHandler(lastAnswer, input) {
+    if (!input) {
+      return { requiresInput: true, message: 'Please enter your name:' };
+    } else {
+      cli.lastAnswer = input; // Save the name as last answer
+      return { response: `Name saved: ${input}` };
+    }
+  }
+
+  function validHandler(lastAnswer) {
+    if (cli.lastAnswer) {
+      return { response: `Name "${cli.lastAnswer}" is valid.` };
+    } else {
+      return { response: '<span style="color: red;">No name found to validate.</span>' };
+    }
+  }
+
+  function printNameHandler(lastAnswer) {
+    if (cli.lastAnswer) {
+      return { response: `Your name is: ${cli.lastAnswer}` };
+    } else {
+      return { response: 'No name found. Please enter your name first.' };
+    }
+  }
+  function alertHandler(lastAnswer) {
+    if (cli.lastAnswer) {
+      alert(`Hello, ${cli.lastAnswer}!`);
+      return { response: `Your name is: ${cli.lastAnswer}` };
+    } else {
+      return { response: 'No name found. Please enter your name first.' };
+    }
+  }
+  // Commands
+  const typeCommand = new Command('type', 'framework', 'Type framework', typeHandler);
+  const nameCommand = new Command('name', 'self', 'Enter your name.', nameHandler);
+  const validCommand = new Command('valid', 'self', 'Validate your name.', validHandler);
+  const printNameCommand = new Command('printname', 'self', 'Print your name.', printNameHandler);
+  const alertCommand = new Command('alertname', 'self', 'Alert your name.', alertHandler);
+  // Build command hierarchy
+  cli.registerCommand(typeCommand);
+  cli.registerCommand(nameCommand, typeCommand);
+  cli.registerCommand(validCommand, nameCommand); // valid is a sub-command of name
+  cli.registerCommand(printNameCommand, nameCommand); // printname is a sub-command of name
+  cli.registerCommand(alertCommand, nameCommand);
+</script>
+</body>
+</html>
