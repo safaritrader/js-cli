@@ -1,4 +1,9 @@
-# Custom Command-Line Interface (CLI) Project
+<div align="center">
+   <h1>Custom Javascript Command-Line Interface (CLI) Project</h1>
+  <a href="https://github.com/safaritrader/lightweight-chart-plugin" target="_blank">
+    <img width="1000" src="https://github.com/safaritrader/js-cli/blob/main/js-cli.jpg">
+  </a>
+</div>
 
 Welcome to the Custom CLI project! This project provides an interactive command-line interface implemented in JavaScript, along with a GUI-based Command Creator to build custom commands and sub-commands.
 
@@ -6,7 +11,7 @@ Welcome to the Custom CLI project! This project provides an interactive command-
 > All of codes in this repository Made with the ChatGPT :white_flag:
 > [![ License](https://img.shields.io/badge/Chat_GPT_Version-o1_preview-blue&?color=red)](https://chatgpt.com)
 
-##[Demo](https://safaritrader.github.io/js-cli/index.html)
+## [Demo](https://safaritrader.github.io/js-cli/index.html)
 
 ## Features
 
